@@ -164,3 +164,4 @@ alias lt='ls --tree'
 
 # zsh-vi-mode plugin
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+alias n='nvim'
