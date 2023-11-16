@@ -8,11 +8,7 @@ return {
       },
     },
     keys = {
-      { -- lazy style key map
-        "<leader>fu",
-        "<cmd>Telescope undo<cr>",
-        desc = "undo history",
-      },
+      { "<leader>bu", "<cmd>Telescope undo<cr>", desc = "undo history" },
     },
     opts = {
       -- don't use `defaults = { }` here, do this in the main telescope spec
