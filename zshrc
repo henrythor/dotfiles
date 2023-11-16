@@ -116,7 +116,7 @@ eval "$(direnv hook zsh)"
 
 function sso() {
   if test $# -ne 2; then
-    echo "Usage: $0 [company] [env]"
+    echo "Usage: $0 [company] [env]"
     return
   fi
   export AWS_PROFILE="${1}-${2}"
