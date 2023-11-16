@@ -163,3 +163,5 @@ alias lt='ls --tree'
 # zsh-vi-mode plugin
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 alias n='nvim'
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
