@@ -18,7 +18,6 @@ return {
       -- don't use `defaults = { }` here, do this in the main telescope spec
       extensions = {
         undo = {
-          -- telescope-undo.nvim config, see below
           use_delta = false,
           use_custom_command = { "bash", "-c", "echo '$DIFF' | git-split-diffs" }, -- setting this implies `use_delta = false`. Accepted format is: { "bash", "-c", "echo '$DIFF' | delta" }
           side_by_side = false,
