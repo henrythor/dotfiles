@@ -114,4 +114,5 @@ ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
 
 #cmd - return : open -na /Applications/kitty.app
-alt -return : kitty -d $(cat ~/.cwd)
+#alt - return : kitty -d $(cat ~/.cwd)
+alt - return: open -a /Applications/kitty.app --args -d $(cat ~/.cwd)
