@@ -135,7 +135,7 @@ export CLASSPATH="$CLASSPATH:$JUNIT_HOME/junit-4.13.2.jar:$JUNIT_HOME/hamcrest-c
 
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 alias t=terraform
 alias tg=terragrunt

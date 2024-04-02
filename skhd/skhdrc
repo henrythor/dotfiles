@@ -114,5 +114,11 @@ ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
 
 #cmd - return : open -na /Applications/kitty.app
-#alt - return : kitty -d $(cat ~/.cwd)
-alt - return: open -a /Applications/kitty.app --args -d $(cat ~/.cwd)
+# alt - return : /opt/homebrew/bin/kitty -1
+# alt - return : open -a /Applications/kitty.app --args -d $(cat ~/.cwd) -1
+# alt - return: open -na /Applications/kitty.app --args -d $(cat ~/.cwd) --instance-group boo
+#
+alt - return : index=$(yabai -m query --displays --display | jq .index) && \
+                    /Applications/Kitty.app/Contents/MacOS/kitty --instance-group=$index --single-instance -d $(cat ~/.cwd)
+# alt - return : index=$(yabai -m query --displays --display | jq .index) && \
+#                     open -na kitty.app --args --instance-group=$index --single-instance -d $(cat ~/.cwd)
