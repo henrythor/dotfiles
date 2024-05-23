@@ -75,10 +75,8 @@ plugins=(
  git
  sudo
  aws
- zsh-syntax-highlighting
- zsh-autosuggestions
- zsh-completions
  zsh-cwd
+ gcloud
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -135,7 +133,7 @@ export CLASSPATH="$CLASSPATH:$JUNIT_HOME/junit-4.13.2.jar:$JUNIT_HOME/hamcrest-c
 
 
 
-source ~/.fzf.zsh
+eval "$(fzf --zsh)"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 alias t=terraform
 alias tg=terragrunt
@@ -161,7 +159,25 @@ alias lla='ls -la'
 alias lt='ls --tree'
 
 # zsh-vi-mode plugin
-source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+HOMEBREW_PREFIX=$(brew --prefix)
+brew_plugins=(
+ $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+ $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ $HOMEBREW_PREFIX/share/zsh-completions
+)
+for brew_plugin in $brew_plugins; source $brew_plugin
+
+source $(brew --prefix)
 alias n='nvim'
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+alias connect='/Users/henry/connect.sh'
+function use_proxy() {
+  export HTTPS_PROXY="localhost:8888"
+} 
+function no_proxy() {
+  export HTTPS_PROXY=""
+}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
