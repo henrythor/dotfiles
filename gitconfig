@@ -1,13 +1,17 @@
 [user]
-  name = Henry Baldursson
-  email = henry.baldursson@gmail.com
-[credential]
-  helper = 
-  helper = /usr/local/share/gcm-core/git-credential-manager
-[credential "https://dev.azure.com"]
-  useHttpPath = true
-[credential "https://github.com"]
-  username = henrythor
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOcH2r8Jk6UGjrI4lzwV4Tw4ORLJZYJhRWlLbmZtT5eB
+	name = Henry Baldursson
+	email = henry@henry.is
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
+
 [core]
   pager = delta
 

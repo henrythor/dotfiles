@@ -74,10 +74,8 @@ ZSH_THEME="robbyrussell"
 plugins=(
  git
  sudo
- aws
  zsh-cwd
  gcloud
- aws
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -134,10 +132,10 @@ export CLASSPATH="$CLASSPATH:$JUNIT_HOME/junit-4.13.2.jar:$JUNIT_HOME/hamcrest-c
 
 
 
-eval "$(fzf --zsh)"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 alias t=terraform
 alias tg=terragrunt
+alias tm=terramate
 alias code=code-insiders
 
 # Autojump
@@ -147,6 +145,7 @@ alias code=code-insiders
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 alias vi=nvim
 export EDITOR=nvim
@@ -162,7 +161,7 @@ alias lt='ls --tree'
 # zsh-vi-mode plugin
 HOMEBREW_PREFIX=$(brew --prefix)
 brew_plugins=(
- $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
  $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
  $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
  $HOMEBREW_PREFIX/share/zsh-completions
@@ -181,9 +180,11 @@ function no_proxy() {
   export HTTPS_PROXY=""
 }
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
