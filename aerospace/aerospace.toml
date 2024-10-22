@@ -199,7 +199,7 @@ alt-shift-s = 'move-node-to-monitor left'
 alt-shift-g = 'move-node-to-monitor right'
 alt-shift-f = 'fullscreen'
 
-alt-enter = 'exec-and-forget open -n /Applications/kitty.app --args --single-instance'
+alt-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
 
 # Customizations end
 
