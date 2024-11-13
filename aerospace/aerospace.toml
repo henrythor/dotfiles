@@ -249,6 +249,6 @@ check-further-callbacks = true
 run = ['move-node-to-workspace C']
 
 [workspace-to-monitor-force-assignment]
-B = 1
-T = 2
-C = 'main'
+B = ['DELL U2723QE (1)', 1]
+T = ['DELL U2723QE (2)', 'DELL U2723QE (1)', 2]
+C = ['Built-in Retina Display', 'main']
