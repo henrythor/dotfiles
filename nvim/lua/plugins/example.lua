@@ -141,6 +141,7 @@ return {
     opts = {
       ensure_installed = {
         "bash",
+        "hcl",
         "html",
         "javascript",
         "json",
