@@ -1,3 +1,5 @@
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.cargo/bin
@@ -112,11 +114,11 @@ setopt HIST_IGNORE_SPACE
 eval "$(direnv hook zsh)"
 
 function sso() {
-  if test $# -ne 2; then
-    echo "Usage: $0 [company] [env]"
+  if test $# -ne 1; then
+    echo "Usage: $0 [env]"
     return
   fi
-  export AWS_PROFILE="${1}-${2}"
+  export AWS_PROFILE="${1}"
   echo "Logging into ${AWS_PROFILE}"
   aws-sso-util login --profile $AWS_PROFILE
   eval $(aws configure export-credentials --format env)
@@ -188,3 +190,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

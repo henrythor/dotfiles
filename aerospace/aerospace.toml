@@ -126,9 +126,9 @@ alt-6 = 'workspace 6'
 #alt-9 = 'workspace 9'
 alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 alt-b = 'workspace B'
-alt-c = 'workspace C'
+#alt-c = 'workspace C'
 alt-d = 'workspace D'
-alt-e = 'workspace E'
+#alt-e = 'workspace E'
 #alt-f = 'workspace F'
 #alt-g = 'workspace G'
 #alt-i = 'workspace I'
@@ -159,7 +159,7 @@ alt-shift-6 = 'move-node-to-workspace 6'
 #alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-a = 'move-node-to-workspace A'
 alt-shift-b = 'move-node-to-workspace B'
-alt-shift-c = 'move-node-to-workspace C'
+#alt-shift-c = 'move-node-to-workspace C'
 alt-shift-d = 'move-node-to-workspace D'
 alt-shift-e = 'move-node-to-workspace E'
 #alt-shift-f = 'move-node-to-workspace F'
@@ -246,9 +246,9 @@ run = ['move-node-to-workspace B']
 [[on-window-detected]]
 if.app-id = 'com.openai.chat'
 check-further-callbacks = true
-run = ['move-node-to-workspace C']
+run = ['move-node-to-workspace 2']
 
 [workspace-to-monitor-force-assignment]
-B = ['DELL U2723QE (1)', 1]
-T = ['DELL U2723QE (2)', 'DELL U2723QE (1)', 2]
+B = ['DELL U2723QE (1)', 'DELL U2722DE', 1]
+T = ['DELL U2723QE (2)', 'DELL U2723QE (1)', 'DELL U2722DE', 2]
 C = ['Built-in Retina Display', 'main']
