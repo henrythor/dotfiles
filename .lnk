@@ -1,4 +1,5 @@
 .config/aerospace
+.config/kitty
 .config/nvim
 .config/ranger
 .config/skhd
