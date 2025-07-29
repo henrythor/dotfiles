@@ -5,3 +5,5 @@
 .config/skhd
 .config/wezterm
 .config/yabai
+.gitconfig
+.zshrc
