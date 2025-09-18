@@ -1,7 +1,7 @@
 [user]
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOcH2r8Jk6UGjrI4lzwV4Tw4ORLJZYJhRWlLbmZtT5eB
-	name = Henry Baldursson
-	email = henry@henry.is
+	name = Henry Thor Baldursson
+	email = henry@sidekickhealth.com
 
 [gpg]
   format = ssh
