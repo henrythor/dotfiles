@@ -171,8 +171,8 @@ input type:touchpad {
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
-    # Lock
-    #
+    # Lock screen
+    bindsym $mod+Ctrl+l exec swaylock
 #
 # Scratchpad:
 #
