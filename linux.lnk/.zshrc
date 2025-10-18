@@ -15,7 +15,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export AWS_REGION="eu-west-1"
-eval "$(op completion zsh)"; compdef _op op
+if which op >& /dev/null; then
+  eval "$(op completion zsh)"; compdef _op op
+fi
 setopt HIST_IGNORE_SPACE
 eval "$(direnv hook zsh)"
 
@@ -29,14 +31,6 @@ function sso() {
   aws-sso-util login --profile $AWS_PROFILE
   eval $(aws configure export-credentials --format env)
 }
-
-# Java stuff
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
-export JUNIT_HOME="$HOME/java"
-export DOTNET_HOME="/usr/local/share/dotnet"
-export PATH="$PATH:$JUNIT_HOME:$DOTNET_HOME"
-export CLASSPATH="$CLASSPATH:$JUNIT_HOME/junit-4.13.2.jar:$JUNIT_HOME/hamcrest-core-1.3.jar"
 
 alias t=terraform
 alias tg=terragrunt
