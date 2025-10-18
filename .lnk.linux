@@ -1,5 +1,4 @@
 .config/foot
-.config/nvim/lazy-lock.json
 .config/sway/config
 .gitconfig
 .zshrc
