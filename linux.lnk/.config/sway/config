@@ -15,7 +15,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 # Recommends: foot
-set $term foot
+set $term wezterm
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -31,7 +31,8 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /usr/share/backgrounds/default.jxl fill
+# output * bg /usr/share/backgrounds/default.jxl fill
+output * bg ~/.local/share/backgrounds/blue_eyed_samurai.png fill
 #
 # Example configuration:
 #
@@ -69,6 +70,11 @@ input type:touchpad {
   natural_scroll enabled
 }
 
+# Apply to all keyboards
+input type:keyboard {
+    xkb_layout "us,is"
+}
+  bindsym --to-code $mod+Space input type:keyboard xkb_switch_layout next
 ### Key bindings
 #
 # Basics:
