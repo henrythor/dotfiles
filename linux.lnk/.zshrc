@@ -55,6 +55,10 @@ alias lla='ls -la'
 alias lt='ls --tree'
 alias n='nvim'
 
+GOROOT="$HOME/go"
+GOBIN="$GOROOT/bin"
+export PATH="$HOME/.tfenv/bin:$PATH:$GOBIN:$HOME/bin"
+
 # Toolbox
 function is_toolbox() {
   if [ -f "/run/.toolboxenv" ]
@@ -63,6 +67,7 @@ function is_toolbox() {
     echo "%F{blue}[%f%F{green}${TOOLBOX_NAME}%F{blue}]%f "
   fi
 }
+
 export PROMPT="$(is_toolbox)$PROMPT"
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
